@@ -1,0 +1,116 @@
+.section--lifespan
+	margin-top 4rem
+	padding 0 1rem
+	
+.image__desktop
+	display none
+	+mq('bp-2')
+		display block
+		
+.image__mobile
+	display block
+	+mq('bp-2')
+		display none
+	
+
+.lifespan__graphic
+	max-width 60rem
+	margin 4rem auto
+	
+	.graphic__toggle
+		display none
+		display flex
+		justify-content center
+		flex-wrap wrap
+		margin-bottom 2rem
+		li 
+			display inline-block
+			margin-right 0.5em
+		button
+			width 7rem
+	
+	.axis--x line
+		stroke $c1-inverted
+	
+	.age
+		text
+			font-size 12px
+			fill $c1-inverted
+			font-weight bold
+			&:first-child
+				fill none
+				stroke $c1
+				stroke-width 3px
+		rect 
+			fill $c1
+	
+	.axis--z text
+		font-size 1rem
+		fill $c1-inverted
+		fill-opacity 0.5
+		font-weight bold
+		text-transform uppercase
+		letter-spacing 0.05em
+	
+	.axis--y text
+		font-size 12px
+		fill $c1-inverted
+		font-weight bold
+		text-transform uppercase
+		letter-spacing 0.05em
+		
+	#life-arrow
+		fill $c1-inverted
+		
+img
+	max-width 60rem
+	
+
+
+
+.annotation path
+	stroke $c1-inverted
+	fill none
+
+.annotation text,
+.annotation .annotation-connector .connector-dot,
+.annotation path.connector-arrow,
+.annotation.callout.rect path.subject
+	fill $gray-light
+
+.annotation-note-content text
+	font-size 0.6rem
+	fill $c1-inverted
+	font-weight bold
+	text-transform uppercase
+	letter-spacing 0.05em
+
+.annotation-note-bg
+	fill none
+
+.annotation.callout.rect path.subject
+	fill-opacity .1
+
+.annotation.badge path.subject-pointer, .annotation.badge path.subject 
+	fill $gray-light
+	stroke-width 3px
+	stroke-linecap round
+
+.annotation.badge path.subject-ring
+	fill white
+	stroke-width 3px
+
+.annotation.badge .badge-text
+	fill white
+	font-size 0.7em
+
+/* Handling edit mode styles */
+.editable .annotation-subject, .editable .annotation-note 
+	cursor move
+
+circle.handle
+	stroke-dasharray 5
+	stroke $gray-light
+	fill rgba(255, 255, 255, .2)
+	cursor move
+	stroke-opacity 0.4

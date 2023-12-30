@@ -1,0 +1,135 @@
+.section--orcaDeath
+	padding 0 1rem
+	
+.orcaDeath__graphic
+	width 100%
+	.graphic__container
+		width 100%
+		max-width 60rem
+		margin 0 auto
+		
+	#arrowHead
+		fill $c1-inverted
+	.axis
+		display none
+	
+.level
+	
+	&--High
+		path
+			fill lighten($c1, 4)
+		
+		.line
+			stroke $c5
+			stroke-width 2px
+			stroke-dasharray 8,4
+			fill none
+			
+	&--Low
+		path 
+			fill $c1
+		.line
+			stroke $c3
+			fill none
+			stroke-width 2px
+			stroke-dasharray 8,4
+			
+		
+
+			
+.circle
+	&--beginning
+		fill $c1
+		stroke $c1-inverted
+		stroke-width 2px
+		fill-opacity 1
+		
+	&--endHigh
+		stroke $c5
+		fill $c1
+		stroke-width 2px
+		fill-opacity 1
+		
+	&--endLow
+		stroke $c3
+		fill $c1
+		stroke-width 2px
+		fill-opacity 1
+
+
+.popG
+			
+	.popLine
+		stroke $c1-inverted
+		
+	.popText
+		fill $c1-inverted
+		text-transform uppercase
+		font-size 12px
+		font-weight bold
+		letter-spacing 0.05em
+		
+	.popRect
+		fill $c1
+		
+.xAnnGroup
+	
+	.xAnnLine
+		stroke $c1-inverted
+		// opacity 0.3
+		
+	.xAnnTextLabel
+		fill $c1-inverted
+		text-transform uppercase
+		font-weight bold
+		letter-spacing 0.05em
+		font-size 10px
+		+mq('bp-desktop')
+			font-size 12px
+		
+	.xRect
+		fill $c1
+		
+	.yearRect
+		fill $c1
+
+		
+	.yearAnn1
+		fill $c3
+		text-transform uppercase
+		font-weight bold
+		letter-spacing 0.05em
+		font-size 1rem
+		
+	.yearAnn2
+		fill $c5
+		text-transform uppercase
+		font-weight bold
+		letter-spacing 0.05em
+		font-size 1rem
+		
+
+.high	
+
+	.annotation-note-content text
+			font-size 0.6rem
+			fill $c5
+			font-weight bold
+			text-transform uppercase
+			letter-spacing 0.05em
+	
+.low	
+
+	.annotation-note-content text
+			font-size 0.6rem
+			fill $c3
+			font-weight bold
+			text-transform uppercase
+			letter-spacing 0.05em
+			
+.connector
+	display none
+	
+.note-line
+	display none
+			
